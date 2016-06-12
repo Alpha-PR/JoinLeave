@@ -1,0 +1,25 @@
+name: JoinLeave-Editor
+version: 1.0.0
+author: "Alpha-PR"
+api: [2.0.0, 1.13.1]
+main: JoinLeave-Editor\Main
+description: "Edit the join and leave message"
+commands:
+ jlmsg:
+    description: "Main CMD"
+    usage: "/jlmsg help"
+    permission: jlmsg
+permissions:
+  jlmsg:
+    default: op
+    description: "Main CMD"
+    children:
+      jlmsg.set.join:
+        default: op
+        description: "Sets the join message"
+      jlmsg.set.leave:
+        default: op
+        description: "Sets the leave message"  
+      jlmsg.help:
+        default: true
+        description: "Displays the help dialogue"
